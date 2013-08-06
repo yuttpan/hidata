@@ -73,7 +73,7 @@ $(function(){
      
     </head>
     <div class="navbar" >
-        <div class="container">
+        <div class="container fluid">
   <a class="navbar-brand" href="#">HI Report</a>
   <ul class="nav navbar-nav">
      <li  color: #999; class="active"><a href="index.php">Home</a></li>
