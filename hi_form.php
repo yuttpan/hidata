@@ -1,24 +1,30 @@
 <?php
 ob_start();
 session_start();
- include_once "menu.php"; ?>
+ include_once "menu.php";
+ 
+ ?>
 
 
     <style type="text/css">  
     .ui-datepicker{  
-        width:250px;  
+        width:350px;  
         font-family:tahoma;  
-        font-size:11px;  
+        font-size:8px;  
         text-align:center;  
     }  
     </style>  
 
-   
+    <div class="row"> 
+        <div class="span10"></div>
+        <div class="span10"></div>
+        <div class="span10"></div>
     <form method="post" action="student_save.php" name="form1">
         
-        <div class="container">    
+          
       
         <div>
+            
             <label>หมู่บ้าน</label>
            <?php echo sql_dropdown("Hi_villcode", "village", "village_name","village_code", $r["village_code"]); ?>
                                      <?//ตัวที่ต้องการบันทึก ตาราง  ?>  
@@ -29,7 +35,7 @@ session_start();
         </div>
         <div>
             <label>ค่า HI</label>
-            <input class="input" type="text" name="Hi_value" style="width: 100px" value="<?php echo $r["hi_value"]; ?>" />
+            <input class="input-control text" type="text" name="Hi_value" style="width: 100px" value="<?php echo $r["hi_value"]; ?>" />
         </div>
         
         <?php echo form_button($r["id"]); ?>
@@ -55,7 +61,7 @@ INNER JOIN thaiaddress ON village.address_id = thaiaddress.addressid
     $rs = mysql_query($sql);
     ?>
 <div class="container"> 
-    <table class="table table-bordered table-striped">
+    <table  class= "stripes border-color-lighten" >
         <thead>
             <tr>
                 <th>วันที่</th>

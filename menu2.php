@@ -1,15 +1,22 @@
 <?php
 ob_start();
 //session_start();
-include_once "header.php";
 include_once "config.php";
 ?>
 <html>
-    <head>
-        <title>ระบบติดตามค่า HI อำเภอแก้งสนามนาง</title>
-        <meta charset="utf-8" />
-      <script type="text/javascript" src="js/jquery-ui-1.9.1.custom.js"></script>
-     
+<head>
+<title>ระบบติดตามค่า HI อำเภอแก้งสนามนาง</title>
+<meta charset="utf-8" />
+
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="css/bootstrap.css" />
+<link rel="stylesheet" href="css/ui-lightness/jquery-ui-1.9.1.custom.css" />
+<script type="text/javascript" src="js/jquery-1.8.2.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.9.1.custom.js"></script>
+
+
+
+
 <script type="text/javascript">
 $(function(){
 var dateBefore=null;
@@ -59,51 +66,17 @@ $(this).val(arrayDate[2]+"-"+arrayDate[1]+"-"+arrayDate[0]);
 });
 });
 </script>
-
-    </head>
-   
-      <div class="page" id="page-index">
-    <div class="nav-bar  bg-color-green">
-    <div class="nav-bar-inner padding10">
-        <span class="pull-menu"></span>
-
-        <a href="/"><span class="element brand">
-            <img class="place-left" src="images/logo32.png" style="height: 20px"/>
-           HI Data
-        </span></a>
-
-        <div class="divider"></div>
-
-        <ul class="menu">
-            <li><a href="index.php">Home</a></li>
-            <li data-role="dropdown">
-                <a href="login.php">บันทึกข้อมูล</a>
-                <ul class="dropdown-menu">
-                    <li><a href="global.php">Global styles</a></li>
-                    <li><a href="layout.php">Layouts and templates</a></li>
-                    <li><a href="grid.php">Grid system</a></li>
-                    <li class="divider"></li>
-                    <li><a href="responsive.php">Responsive design</a>
-                    </li>
-                </ul>
-            </li>
-            <li data-role="dropdown"><a href="#">รายงาน</a>
-                <ul class="dropdown-menu">
-                    <li><a href="reportvill.php">ค่า Hi รายหมู่บ้าน</a></li>
-                    
-                    
-                </ul>
-            </li>
-            
-
-            <li><a href="https://github.com/olton/Metro-UI-CSS">Source</a></li>
-        </ul>
-
-    </div>
-    
- 
+</head>
+<div class="navbar" >
+<div class="container fluid">
+<a class="navbar-brand" href="#">HI Report</a>
+<ul class="nav navbar-nav">
+<li color: #999; class="active"><a href="index.php">Home</a></li>
+<li><a href="login.php">บันทึกข้อมูล</a></li>
+<li><a href="reportvill.php??Hi_villcode=''">รายงาน</a></li>
+</ul>
 </div>
-
-   
-
-        
+<div>
+<a class="navbar-brand" href="#">ระบบติดตามการควบคุมลูกน้ำยุงลาย อำเภอแก้งสนามนาง</a>
+</div>
+</div>

@@ -27,11 +27,30 @@ include 'menu.php';
 	<link href='css/opa-icons.css' rel='stylesheet'>
 	<link href='css/uploadify.css' rel='stylesheet'>
         <body>
-            <div class="container">
+            <div class="grid">
+                <div class="row">
+                    <div class="span10"></div>
+                    <div class="span10"></div>
+                    <div class="span8 bg-color-redLight">
+                        <img src="images/simple.png" class="place-right" style="margin: 10px;"/>
+                        <h2 class="fg-color-white">&nbsp;แสดงค่า HI รายหมู่บ้าน</h2>
+                    </div>
+
+                    
+
+                    
+                </div>
+            </div>
+            
+          <div class="page" id="page-index">
+    <div class="page-region">
+        <div class="page-region-content">
+            <div class="grid">
+                <div class="row">
+                    <div class="span8">
     <form class="form-inline" name="frmSearch" method="get" action="<?=$_SERVER['SCRIPT_NAME'];?>">
-  <table width="599" border="1">
-    <tr>
-     
+  
+      
     <div>
      <label>หมู่บ้าน</label>
            <?php echo sql_dropdown("Hi_villcode", "village", "village_name","village_code", $r["village_code"]); ?>
@@ -39,11 +58,18 @@ include 'menu.php';
        
       <input type="submit" value="ตกลง">
        </div>
-    </tr>
-  </table>
+    
+  
 </form>
                 
        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+          </div>
+        
+        
         <?php
         /**
          * Change these to your own credentials
@@ -92,7 +118,7 @@ where Hi_villcode = $v order by hi_date ");
         }
         }
         
-        echo $data_string;
+        //echo $data_string;
        
         ?>
 
@@ -100,14 +126,36 @@ where Hi_villcode = $v order by hi_date ");
         <!-- Don't forget to update these paths -->
 
         
- <div class="container well-large">
-     <div class="panel panel-primary"> <? echo "แสดงค่า HI บ้าน  ".$pcu_name ?></div>
-           
+        <div class="row">
+            <div class="span10">
+                 
+
+                    <ul class="listview">
+                        <li class="bg-color-pinkDark fg-color-white">
+                            <div class="icon">
+                                <img src="images/onenote2013icon.png" />
+                            </div>
+
+                            <div class="data">
+                                <h4 class="fg-color-white"><? echo "แสดงค่า HI บ้าน  ".$pcu_name ?></h4>
+                               
+                                    </li> 
+                            </ul>
+                              
+                               
+                           
+                      
+        
+
+   
+            
       
         <canvas id="cvs" width="600" height="450">[No canvas support]</canvas>
-     
- </div>
-              <script>
+     </div>
+                            </div>
+             
+ 
+               <script>
             
             chart = new RGraph.Line('cvs', <?php print($data_string) ?>);
             chart.Set('linewidth', 3)

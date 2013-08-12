@@ -2,18 +2,37 @@
 <html>
 
 <body>
-    <div class="container well">
-        <div class="alert alert-info" align="center">กรุณา Login </div>
+    
+   <div class="page" id="page-index">
+       
+        <div class="span10"></div>
+          <div class="span10"></div>
+          <div class="span10"></div>
+        <div class="hero-unit">
+            <div class="row" align="center">
+         <button class="command-button default">กรุณาเข้าระบบ</button>
+            </div>
     <div class="row" align ="center">   
 <form class ="form-inline" name="form1" method="post" action="checklogin.php">
-    <input name="txtUsername" type="text" id="txtUsername">
-  <td><input name="txtPassword" type="password" id="txtPassword">
-  <div class="checkbox">
-    
-  </div>
-  <button type="submit" class="btn-large btn-success">Sign in</button>
+    <div class="span4">
+    <div class="input-control text" id="txtUsername">
+<input type="text" name="txtUsername" />
+<button class="btn-clear"></button>
+    </div>
+</div>
+   <div class="span4">
+        <div class="input-control password">
+    <input type="password" name="txtPassword" id="txtPassword"  />
+    <button class="btn-clear"> </button>
+    </div>
+</div>
+
+  <div class="span10"></div>
+  <div class="span10"></div>
+   <input type="submit" value="ตกลง"/>
 </form>
     </div>
     </div>   
+   </div>
         </body>
 </html>

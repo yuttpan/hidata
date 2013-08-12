@@ -2,7 +2,7 @@
 ob_start();
 session_start();
 
-include_once "config.php";
+
 
            
                         include_once "menu.php"; 
@@ -10,22 +10,7 @@ include_once "config.php";
 
 <html>
     <head>
-        <style type="text/css">
-html { height: 100% }
-body { 
-	height:100%;
-	margin:0;padding:0;
-	font-family:tahoma, "Microsoft Sans Serif", sans-serif, Verdana;
-	font-size:12px;
-}
-/* css กำหนดความกว้าง ความสูงของแผนที่ */
-#map_canvas { 
-	width:800px;
-	height:500px;
-	margin:auto;
-/*	margin-top:100px;*/
-}
-</style>
+       
     </head>
     <body>
        
@@ -41,8 +26,11 @@ mysql_query("SET NAMES UTF8");
 ?>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 <style type="text/css">
-html { height: 100% }
+html { height: 100%;
+ top:20;
+}
 body { 
+   
 	height:100%;
 	margin:0;padding:0;
 	font-family:tahoma, "Microsoft Sans Serif", sans-serif, Verdana;
@@ -52,8 +40,9 @@ body {
 #map_canvas { 
 	width:100%;
 	height:100%;
+        
 	margin:auto;
-/*	margin-top:100px;*/
+	margin-top:auto;
 }
 </style>
 <script type="text/javascript" src="js/jquery-1.8.2.js"></script>
@@ -139,5 +128,11 @@ if ($num>0){
             });
         });
     </script>
+   
+      <div class="row">
+          <div class="span8"></div>
+          <div class="span8"></div>
+           </div>
 <div id="map_canvas"></div>
-</html>
+     
+    </html>
